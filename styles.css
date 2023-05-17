@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: aliceblue;
+}
+.contenedor-pagina > *{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.cabeza{
+    display: flex;
+    Justify-content: space-between;
+    padding: 10px;
+}
+
+.contenedor-pagina{
+ 
+    margin: 20px;
+    padding: 30px;
+    display: grid;
+    grid-gap: 20px;
+
+    grid-template-areas:
+    'menu menu menu'
+    'imagen info info'
+    'der cent izq'
+    'datos datos izq'
+    'pie pie pie'
+    ;
+    
+}
+.optiones .logo{
+    height: 200px;
+    width: 200px;
+}
+.optiones{
+    display: flex;
+    justify-content: space-between;
+    width: 100vh;
+}
+.redes{
+    height: 40px;
+    width: 40px;
+    padding: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+}
+.main-menu{
+    grid-area: menu;
+
+    margin: 5px;  
+    padding: 10px;
+    margin-bottom: 100px;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+
+    width: 100vh;
+    align-items: center;
+    justify-content:space-around
+    
+
+}
+
+.sec-img{
+    grid-area: imagen;
+    margin: 5px;
+    padding: 10px;
+}
+.sec-info{
+    grid-area: info;
+    margin: 5px;
+    padding: 10px;
+}
+.asi-der{
+    grid-area: der;
+    margin: 5px;
+    padding: 10px;
+}
+.asi-der h1{
+    text-align: center;
+}
+.sec-cent{
+    grid-area: cent;
+}
+.sec-cent img{
+    height: 400px;
+    width: 800px;
+}
+.asi-izq{
+    grid-area: izq;
+}
+.asi-izq img{
+    height: 200px;
+    width: 200px;
+}
+.asi-izq h1{
+    text-align: center;
+}
+.asi-izq form{
+    text-align: center;
+    padding: 20px;
+}
+.datos{
+    grid-area: datos;
+    margin: 10px;
+    padding: 20px;
+}
+.pie{
+    grid-area: pie;
+    padding: 20px;
+}
+@media (max-width: 650px) {
+    .contenedor-pagina{
+        margin: 10px;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-areas: 
+        'menu'
+        'imagen'
+        'info'
+        'der'
+        'cent'
+        'izq'
+        'datos'
+        'pie'
+        ;
+    }
+    .contenedor-pagina > *{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .menu,
+    .redes {
+        display: none;
+    }
+    .optiones, .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    body{
+        display:flex;
+      
+    }
+}
